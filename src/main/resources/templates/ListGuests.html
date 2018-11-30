@@ -4,11 +4,11 @@
 	<head>
 	  <meta charset="UTF-8"/>
 	  <meta name="viewport" content="width=device-width" />
-	  <title>Lista de Convidados</title>
+	  <title>List of Guests</title>
 	  <link type="text/css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}" rel="stylesheet"/>
 	</head>
 	<body>
-		<form class=form-inline method="POST" th:object="${convidado}" th:action=@{/convidados} style="margin: 20px 0">
+		<form class=form-inline method="POST" th:object="${guest}" th:action=@{/guests} style="margin: 20px 0">
 		    <div class="form-group">
 		        <input type="text" class="form-control"
 		                placeholder="Nome"
@@ -17,13 +17,13 @@
 		            placeholder="Acompanhantes"
 		            th:field="*{quantidadeAcompanhantes}"/>
 		        <button type="submit"
-		            class="btn btn-primary">Adicionar</button>
+		            class="btn btn-primary">Add</button>
 			</div>
 		</form>
 		<!-- -------------------------------------------- -->
 	   <div class="panel panel-default" style="margin: 10px">
         <div class="panel-heading">
-            <h1 class="panel-title">Lista de Convidados</h1>
+            <h1 class="panel-title">List of Guests</h1>
 		</div>
         <div class="panel-body">
             <table class="table">
@@ -34,9 +34,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="convidado : ${convidados}">
-					    <td th:text="${convidado.nome}"></td>
-					    <td th:text="${convidado.quantidadeAcompanhantes}"></td>
+                    <tr th:each="guest : ${guests}">
+					    <td th:text="${guest.nome}"></td>
+					    <td th:text="${guest.quantidadeAcompanhantes}"></td>
 					</tr>
                 </tbody>
             </table>

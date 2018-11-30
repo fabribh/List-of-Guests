@@ -1,4 +1,4 @@
-package com.algaworks.festa;
+package com.fabribh.party;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class GestaoFestaApplicationTests {
+public class ManagePartyApplicationTests {
 
 	@Test
 	public void contextLoads() {
